@@ -16,6 +16,8 @@
 </head>
 <body>
 <h1>Sample Library</h1>
+<span id="greeting"></span></h4>
+<span id="library"></span>
 <div id="library">
   <h3>Users</h3>
   <div id="users">
@@ -79,6 +81,10 @@
 <script>
   function testTheTruth() {
     testResults('1 is equal to 1', 1 === 1);
+    testResults('2 is not equal to 1', 2!== 1);
+    testResults('2 is not equal to 1 compare', 2=== 1);
+    testResults('asegurese que el nombre es mayusculas', $('#greeting').text() === changeNameToUppercase($('#greeting').text()));
+    testResults('el año es 2018', (new Date).getFullYear() === 2018);
   }
   (function() {
     testTheTruth();
